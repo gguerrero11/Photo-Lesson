@@ -15,6 +15,7 @@
 		13015C6924572DA1002C78C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13015C6724572DA1002C78C1 /* LaunchScreen.storyboard */; };
 		13015C7424572DA2002C78C1 /* Photo_LessonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13015C7324572DA2002C78C1 /* Photo_LessonsTests.swift */; };
 		13015C7F24572DA2002C78C1 /* Photo_LessonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13015C7E24572DA2002C78C1 /* Photo_LessonsUITests.swift */; };
+		13990BA924572E5F00B122E5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BA824572E5F00B122E5 /* Lesson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		13015C7A24572DA2002C78C1 /* Photo LessonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo LessonsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13015C7E24572DA2002C78C1 /* Photo_LessonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_LessonsUITests.swift; sourceTree = "<group>"; };
 		13015C8024572DA2002C78C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13990BA824572E5F00B122E5 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				13015C5C24572D9F002C78C1 /* AppDelegate.swift */,
 				13015C5E24572D9F002C78C1 /* SceneDelegate.swift */,
 				13015C6024572D9F002C78C1 /* ContentView.swift */,
+				13990BA824572E5F00B122E5 /* Lesson.swift */,
 				13015C6224572DA1002C78C1 /* Assets.xcassets */,
 				13015C6724572DA1002C78C1 /* LaunchScreen.storyboard */,
 				13015C6A24572DA1002C78C1 /* Info.plist */,
@@ -270,6 +273,7 @@
 				13015C5D24572D9F002C78C1 /* AppDelegate.swift in Sources */,
 				13015C5F24572D9F002C78C1 /* SceneDelegate.swift in Sources */,
 				13015C6124572D9F002C78C1 /* ContentView.swift in Sources */,
+				13990BA924572E5F00B122E5 /* Lesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
