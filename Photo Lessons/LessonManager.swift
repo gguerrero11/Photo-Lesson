@@ -6,21 +6,24 @@
 //  Copyright © 2020 Gabriel Guerrero. All rights reserved.
 //
 
+import SwiftUI
+import Combine
 import Foundation
-import UIKit
 
-class LessonManager {
-    var lessons = [Lesson]()
-    var lessonDownloadCallback: (()->Void)?
-    
-    let isMockData = true
-    
+class LessonManager: ObservableObject {
+    @Published var lessons = [Lesson]()
+    private var cancellable: AnyCancellable?
     let lessonsURL = "https://iphonephotographyschool.com/test-api/videos"
+    let isMockData = false
+    
+    init() {
+        getLessons()
+    }
     
     func getLessons() {
         if let url = URL(string: lessonsURL) {
             URLSession.shared.dataTask(with: url) { data, response, error in
-                self.handleData(data: data)
+                    self.handleData(data: data)
             }.resume()
         }
     }
@@ -39,9 +42,10 @@ class LessonManager {
             let jsonData = jsonString.data(using: .utf8)!
             let response = try JSONDecoder().decode(Response.self, from: jsonData)
             
-            if let lessons = response.lessons, let callback = self.lessonDownloadCallback {
-                self.lessons = lessons
-                callback()
+            if let lessons = response.lessons {
+                DispatchQueue.main.async {
+                    self.lessons = lessons
+                }
             }
         } catch {
             print(error)

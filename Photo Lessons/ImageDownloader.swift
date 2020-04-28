@@ -50,6 +50,9 @@ struct AsyncImage<Placeholder: View>: View {
         image
             .onAppear(perform: downloader.load)
             .onDisappear(perform: downloader.cancel)
+            .frame(width: 50, height: 50, alignment: .center)
+            .cornerRadius(50/4)
+        
     }
     
     private var image: some View {

@@ -9,10 +9,15 @@
 import SwiftUI
 
 struct LessonList: View {
+    
+    @ObservedObject var manager = LessonManager()
+    
     var body: some View {
-        List {
-            LessonRowView(lesson: mockLesson)
-            LessonRowView(lesson: mockLesson2)
+        NavigationView {
+            List(manager.lessons) { lesson in
+                LessonRowView(lesson: lesson)
+            }
+            .navigationBarTitle("Videos")
         }
     }
 }

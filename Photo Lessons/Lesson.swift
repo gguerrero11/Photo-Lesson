@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Lesson: Codable {
+struct Lesson: Codable, Identifiable {
     var id: Int
     var name: String
     var thumbURL: String

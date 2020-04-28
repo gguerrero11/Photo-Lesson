@@ -116,9 +116,9 @@
 				13015C6024572D9F002C78C1 /* ContentView.swift */,
 				13990BB6245890C300B122E5 /* LessonList.swift */,
 				13990BA824572E5F00B122E5 /* Lesson.swift */,
+				13990BAA2457304400B122E5 /* LessonManager.swift */,
 				13990BB024573EAA00B122E5 /* LessonRowView.swift */,
 				13990BB424588D0B00B122E5 /* ImageDownloader.swift */,
-				13990BAA2457304400B122E5 /* LessonManager.swift */,
 				13990BAC245732EE00B122E5 /* MockData.swift */,
 				13015C6224572DA1002C78C1 /* Assets.xcassets */,
 				13015C6724572DA1002C78C1 /* LaunchScreen.storyboard */,
@@ -506,7 +506,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 66Z8273A2W;
+				DEVELOPMENT_TEAM = Y5AY735344;
 				INFOPLIST_FILE = "Photo LessonsTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

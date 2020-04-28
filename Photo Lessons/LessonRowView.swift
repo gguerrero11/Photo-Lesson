@@ -16,7 +16,7 @@ struct LessonRowView: View {
         HStack {
             AsyncImage(url: url!,
                        placeholder: Image(systemName: "photo")
-            ).aspectRatio(contentMode: .fit)
+            )
             Text(lesson.name)
             Spacer()
         }
@@ -29,7 +29,7 @@ struct LessonRowView_Previews: PreviewProvider {
         Group {
             LessonRowView(lesson: mockLesson)
         }
-        .previewLayout(.fixed(width: 300, height: 70))
+        .previewLayout(.fixed(width: 50, height: 50))
         
     }
 }
