@@ -15,7 +15,7 @@ struct LessonList: View {
     var body: some View {
         NavigationView {
             List(manager.lessons) { lesson in
-                NavigationLink(destination: DetailLessonView()) {
+                NavigationLink(destination: DetailLessonView(lesson: lesson)) {
                     LessonRowView(lesson: lesson)
                 }
             }

@@ -15,7 +15,7 @@ struct LessonRowView: View {
         HStack {
             AsyncImage(urlString: lesson.thumbURL,
                        errorImage: Image(systemName: "video.slash.fill")
-            )
+            ).frame(width: 50, height: 50, alignment: .center)
             Text(lesson.name)
             Spacer()
         }

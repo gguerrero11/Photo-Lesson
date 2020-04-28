@@ -57,7 +57,6 @@ struct AsyncImage<Placeholder: View>: View {
         image
             .onAppear(perform: downloader.load)
             .onDisappear(perform: downloader.cancel)
-            .frame(width: 50, height: 50, alignment: .center)
             .cornerRadius(50/4)
     }
     
@@ -67,7 +66,7 @@ struct AsyncImage<Placeholder: View>: View {
                 Image(uiImage: downloader.image!)
                 .resizable()
             } else {
-                placeholder
+                placeholder?.frame(width: 50, height: 50, alignment: .center)
             }
         }
     }
