@@ -10,10 +10,13 @@ import SwiftUI
 
 struct LessonRowView: View {
     var lesson: Lesson
+    let url = URL(string: mockLesson.thumbURL)
     
     var body: some View {
         HStack {
-//            Image(systemName: "photo")
+            AsyncImage(url: url!,
+                       placeholder: Image(systemName: "photo")
+            ).aspectRatio(contentMode: .fit)
             Text(lesson.name)
             Spacer()
         }
@@ -24,7 +27,6 @@ struct LessonRowView_Previews: PreviewProvider {
         
     static var previews: some View {
         Group {
-            LessonRowView(lesson: mockLesson)
             LessonRowView(lesson: mockLesson)
         }
         .previewLayout(.fixed(width: 300, height: 70))
