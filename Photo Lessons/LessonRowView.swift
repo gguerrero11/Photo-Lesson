@@ -9,12 +9,16 @@
 import SwiftUI
 
 struct LessonRowView: View {
+    
+    @Environment(\.imageStore) var store: ImageStore
+    
     var lesson: Lesson
     
     var body: some View {
         HStack {
             AsyncImage(urlString: lesson.thumbURL,
-                       errorImage: Image(systemName: "video.slash.fill")
+                       errorImage: Image(systemName: "video.slash.fill"),
+                       store: self.store
             ).frame(width: 50, height: 50, alignment: .center)
             Text(lesson.name)
             Spacer()

@@ -9,14 +9,18 @@
 import SwiftUI
 
 struct DetailLessonView: View {
+    
+    @Environment(\.imageStore) var store: ImageStore
     var lesson: Lesson
+    
     var body: some View {
             VStack {
                 HStack(alignment: .center) {
                     AsyncImage(urlString: lesson.thumbURL,
-                               errorImage: Image(systemName: "video.slash.fill")
-                    )
+                               errorImage: Image(systemName: "video.slash.fill"),
+                               store: self.store )
                         .frame(width: UIScreen.main.bounds.width - 40, height: UIScreen.main.bounds.width / 1.5, alignment: .center)
+                        .clipped()
                 }
                 Text(lesson.name)
                     .font(.system(size: 25))

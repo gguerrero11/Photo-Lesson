@@ -21,6 +21,7 @@
 		13990BB124573EAA00B122E5 /* LessonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BB024573EAA00B122E5 /* LessonRowView.swift */; };
 		13990BB524588D0B00B122E5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BB424588D0B00B122E5 /* ImageDownloader.swift */; };
 		13990BB7245890C300B122E5 /* LessonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BB6245890C300B122E5 /* LessonList.swift */; };
+		13990BBB2458E44700B122E5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BBA2458E44600B122E5 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		13990BB024573EAA00B122E5 /* LessonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRowView.swift; sourceTree = "<group>"; };
 		13990BB424588D0B00B122E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		13990BB6245890C300B122E5 /* LessonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonList.swift; sourceTree = "<group>"; };
+		13990BBA2458E44600B122E5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				13990BAA2457304400B122E5 /* LessonManager.swift */,
 				13990BB024573EAA00B122E5 /* LessonRowView.swift */,
 				13990BB424588D0B00B122E5 /* ImageDownloader.swift */,
+				13990BBA2458E44600B122E5 /* Utility.swift */,
 				13990BAC245732EE00B122E5 /* MockData.swift */,
 				13015C6224572DA1002C78C1 /* Assets.xcassets */,
 				13015C6724572DA1002C78C1 /* LaunchScreen.storyboard */,
@@ -288,6 +291,7 @@
 				13990BAB2457304400B122E5 /* LessonManager.swift in Sources */,
 				13990BB124573EAA00B122E5 /* LessonRowView.swift in Sources */,
 				13990BB7245890C300B122E5 /* LessonList.swift in Sources */,
+				13990BBB2458E44700B122E5 /* Utility.swift in Sources */,
 				13990BB524588D0B00B122E5 /* ImageDownloader.swift in Sources */,
 				13990BAD245732EE00B122E5 /* MockData.swift in Sources */,
 				13015C5D24572D9F002C78C1 /* AppDelegate.swift in Sources */,
