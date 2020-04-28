@@ -1,21 +1,21 @@
 //
-//  ContentView.swift
+//  DetailLessonView.swift
 //  Photo Lessons
 //
-//  Created by Gabe Guerrero on 4/27/20.
+//  Created by Gabe Guerrero on 4/28/20.
 //  Copyright © 2020 Gabriel Guerrero. All rights reserved.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct DetailLessonView: View {
     var body: some View {
         Text("Hello, World!")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DetailLessonView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DetailLessonView()
     }
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		13015C5D24572D9F002C78C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13015C5C24572D9F002C78C1 /* AppDelegate.swift */; };
 		13015C5F24572D9F002C78C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13015C5E24572D9F002C78C1 /* SceneDelegate.swift */; };
-		13015C6124572D9F002C78C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13015C6024572D9F002C78C1 /* ContentView.swift */; };
+		13015C6124572D9F002C78C1 /* DetailLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13015C6024572D9F002C78C1 /* DetailLessonView.swift */; };
 		13015C6324572DA1002C78C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13015C6224572DA1002C78C1 /* Assets.xcassets */; };
 		13015C6624572DA1002C78C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13015C6524572DA1002C78C1 /* Preview Assets.xcassets */; };
 		13015C6924572DA1002C78C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13015C6724572DA1002C78C1 /* LaunchScreen.storyboard */; };
@@ -44,7 +44,7 @@
 		13015C5924572D9F002C78C1 /* Photo Lessons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Lessons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13015C5C24572D9F002C78C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13015C5E24572D9F002C78C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13015C6024572D9F002C78C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		13015C6024572D9F002C78C1 /* DetailLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLessonView.swift; sourceTree = "<group>"; };
 		13015C6224572DA1002C78C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13015C6524572DA1002C78C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		13015C6824572DA1002C78C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			children = (
 				13015C5C24572D9F002C78C1 /* AppDelegate.swift */,
 				13015C5E24572D9F002C78C1 /* SceneDelegate.swift */,
-				13015C6024572D9F002C78C1 /* ContentView.swift */,
+				13015C6024572D9F002C78C1 /* DetailLessonView.swift */,
 				13990BB6245890C300B122E5 /* LessonList.swift */,
 				13990BA824572E5F00B122E5 /* Lesson.swift */,
 				13990BAA2457304400B122E5 /* LessonManager.swift */,
@@ -292,7 +292,7 @@
 				13990BAD245732EE00B122E5 /* MockData.swift in Sources */,
 				13015C5D24572D9F002C78C1 /* AppDelegate.swift in Sources */,
 				13015C5F24572D9F002C78C1 /* SceneDelegate.swift in Sources */,
-				13015C6124572D9F002C78C1 /* ContentView.swift in Sources */,
+				13015C6124572D9F002C78C1 /* DetailLessonView.swift in Sources */,
 				13990BA924572E5F00B122E5 /* Lesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

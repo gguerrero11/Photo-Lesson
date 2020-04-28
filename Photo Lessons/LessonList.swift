@@ -15,7 +15,9 @@ struct LessonList: View {
     var body: some View {
         NavigationView {
             List(manager.lessons) { lesson in
-                LessonRowView(lesson: lesson)
+                NavigationLink(destination: DetailLessonView()) {
+                    LessonRowView(lesson: lesson)
+                }
             }
             .navigationBarTitle("Videos")
         }

@@ -10,12 +10,11 @@ import SwiftUI
 
 struct LessonRowView: View {
     var lesson: Lesson
-    let url = URL(string: mockLesson.thumbURL)
     
     var body: some View {
         HStack {
-            AsyncImage(url: url!,
-                       placeholder: Image(systemName: "photo")
+            AsyncImage(urlString: lesson.thumbURL,
+                       errorImage: Image(systemName: "video.slash.fill")
             )
             Text(lesson.name)
             Spacer()
