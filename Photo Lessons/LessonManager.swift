@@ -13,6 +13,8 @@ class LessonManager {
     var lessons = [Lesson]()
     var lessonDownloadCallback: (()->Void)?
     
+    let isMockData = true
+    
     let lessonsURL = "https://iphonephotographyschool.com/test-api/videos"
     
     func getLessons() {

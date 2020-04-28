@@ -18,6 +18,8 @@
 		13990BA924572E5F00B122E5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BA824572E5F00B122E5 /* Lesson.swift */; };
 		13990BAB2457304400B122E5 /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BAA2457304400B122E5 /* LessonManager.swift */; };
 		13990BAD245732EE00B122E5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BAC245732EE00B122E5 /* MockData.swift */; };
+		13990BB124573EAA00B122E5 /* LessonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BB024573EAA00B122E5 /* LessonRowView.swift */; };
+		13990BB524588D0B00B122E5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13990BB424588D0B00B122E5 /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		13990BA824572E5F00B122E5 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		13990BAA2457304400B122E5 /* LessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonManager.swift; sourceTree = "<group>"; };
 		13990BAC245732EE00B122E5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		13990BB024573EAA00B122E5 /* LessonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRowView.swift; sourceTree = "<group>"; };
+		13990BB424588D0B00B122E5 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				13015C5E24572D9F002C78C1 /* SceneDelegate.swift */,
 				13015C6024572D9F002C78C1 /* ContentView.swift */,
 				13990BA824572E5F00B122E5 /* Lesson.swift */,
+				13990BB024573EAA00B122E5 /* LessonRowView.swift */,
+				13990BB424588D0B00B122E5 /* ImageDownloader.swift */,
 				13990BAA2457304400B122E5 /* LessonManager.swift */,
 				13990BAC245732EE00B122E5 /* MockData.swift */,
 				13015C6224572DA1002C78C1 /* Assets.xcassets */,
@@ -277,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13990BAB2457304400B122E5 /* LessonManager.swift in Sources */,
+				13990BB124573EAA00B122E5 /* LessonRowView.swift in Sources */,
+				13990BB524588D0B00B122E5 /* ImageDownloader.swift in Sources */,
 				13990BAD245732EE00B122E5 /* MockData.swift in Sources */,
 				13015C5D24572D9F002C78C1 /* AppDelegate.swift in Sources */,
 				13015C5F24572D9F002C78C1 /* SceneDelegate.swift in Sources */,
