@@ -18,7 +18,8 @@ struct DetailLessonView: View {
     var body: some View {
         VStack {
             ProgressBar(value: $downloader.progress)
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                .frame(width: UIScreen.main.bounds.width, height: (isDownloading ? 10 : 0), alignment: .top)
+                .clipped()
             PlayerView(lesson: self.lesson)
             Text(lesson.name)
                 .font(.system(size: 25))

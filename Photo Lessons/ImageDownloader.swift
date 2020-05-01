@@ -97,7 +97,6 @@ struct AsyncImage<Placeholder: View>: View {
             if downloader.image != nil {
                 Image(uiImage: downloader.image!)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
             } else {
                 placeholder?.frame(width: 50, height: 50, alignment: .center)
             }

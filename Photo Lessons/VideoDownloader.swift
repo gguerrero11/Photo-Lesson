@@ -16,13 +16,13 @@ struct ProgressBar: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                Rectangle().frame(width: geometry.size.width , height: 10)
+            ZStack(alignment: .topLeading) {
+                Rectangle().frame(width: geometry.size.width , height: 4, alignment: .top)
                     .opacity(0.3)
                     .foregroundColor(Color(UIColor.systemTeal))
-                Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: 10)
+                Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: 4, alignment: .top)
                 .foregroundColor(Color(UIColor.systemBlue))
-            }.cornerRadius(5)
+            }
         }
     }
 }
@@ -57,8 +57,10 @@ class VideoDownloader: NSObject {
     private var cancellable: AnyCancellable?
     var downloadTask: AVAssetDownloadTask?
     var url: URL?
+    var urlAsset: AVURLAsset?
     
     func downloadVideo(url: URL) {
+        self.url = url
         // Create new background session configuration.
         let configuration = URLSessionConfiguration.background(withIdentifier: identifier)
         
@@ -66,8 +68,10 @@ class VideoDownloader: NSObject {
         let downloadSession = AVAssetDownloadURLSession(configuration: configuration,
                                                     assetDownloadDelegate: self,
                                                     delegateQueue: OperationQueue.main)
-        let asset = AVURLAsset(url: url)
+        guard let url = self.url else { return }
+        urlAsset = AVURLAsset(url: url)
         
+        guard let asset = self.urlAsset else { return }
         // Create new AVAssetDownloadTask for the desired asset
         downloadTask = downloadSession.makeAssetDownloadTask(asset: asset,
                                                                  assetTitle: "title",
@@ -98,9 +102,10 @@ extension VideoDownloader: AVAssetDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didFinishDownloadingTo location: URL) {
-        let avAsset = AVAsset(url: location)
+        print("saved at: \(location)")
         if let key = url?.absoluteString {
-            LessonManager.cacheVideo(video: avAsset, forKey: key)
+            print("for key: \(key)")
+            LessonManager.cacheVideo(video: assetDownloadTask.urlAsset, forKey: key)
         }
     }
 

@@ -86,6 +86,7 @@ class LessonManager: ObservableObject {
         let relativePath = "video_\(Date.timeIntervalSinceReferenceDate).mov"
         let cachePath = LessonManager.documentsPathForFileName(name: relativePath)
         let url = URL(fileURLWithPath: cachePath)
+        print("caching at \(url)")
         
         // asset is you AVAsset object
         let exportSession = AVAssetExportSession.init(asset: video, presetName: AVAssetExportPresetHighestQuality)
