@@ -9,6 +9,7 @@
 import SwiftUI
 import Combine
 import Foundation
+import AVKit
 
 /// Protocol allows us to allow subscripting for properties that conform to this
 protocol ImageStore {
@@ -103,3 +104,4 @@ struct AsyncImage<Placeholder: View>: View {
         }
     }
 }
+
