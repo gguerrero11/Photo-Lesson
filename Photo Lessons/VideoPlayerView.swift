@@ -18,15 +18,13 @@ class VideoPlayerView: UIView {
     
     init(frame: CGRect, url: URL) {
         super.init(frame: frame)
-        if let avAsset = LessonManager.getVideo(forKey: url.absoluteString) {
+        if let location = LessonManager.getVideo(forKey: url.absoluteString) {
             print("found locally")
-            //            let location = "Library/com.apple.UserManagedAssets.ecjvdO/title_DDC97A063F825EBA.movpkg -- file:///private/var/mobile/Containers/Data/Application/CDAB3958-FF2E-497A-AEC7-E971E58B0C9C/"
-            //            let location = "Library/com.apple.UserManagedAssets.ecjvdO/title_DDC97A063F825EBA.movpkg"
-            //            let location = "Library/com.apple.UserManagedAssets.ecjvdO/title_DDC97A063F825EBA.movpkg -- file:///private/var/mobile/Containers/Data/Application/CDAB3958-FF2E-497A-AEC7-E971E58B0C9C/"
-            //                let url = URL(string: "file:///var/mobile/Containers/Data/Application/643332EE-253A-44BC-BEE1-73D0CB451F82/Documents/video_610058499.460731.mov")
-            //            let url = URL(string: location)
-            //            player.replaceCurrentItem(with: AVPlayerItem(url: url!))
-            player.replaceCurrentItem(with: AVPlayerItem(asset: avAsset))
+//            let location = "file:///private/var/mobile/Containers/Data/Application/E15FF0E8-8578-4F49-B320-8FB576B6536E/Library/com.apple.UserManagedAssets.rufXug/videoTitle_3A414B382F9D734D.movpkg"
+//            let url = URL(string: location)
+//            let avURLasset = AVURLAsset(url: url!)
+            player.replaceCurrentItem(with: AVPlayerItem(url: location))
+//            player.replaceCurrentItem(with: AVPlayerItem(asset: avAsset))
         } else {
             print("streaming")
             player.replaceCurrentItem(with: AVPlayerItem(url: url))

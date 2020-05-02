@@ -82,20 +82,20 @@ class LessonManager: ObservableObject {
     /// - Parameter video: The video to be cached
     /// - Parameter forPath: The key to cache the image. In this case, the URL of the image.
     
-    static func cacheVideo(video: AVAsset, forKey key: String) {
-        let relativePath = "video_\(Date.timeIntervalSinceReferenceDate).mov"
-        let cachePath = LessonManager.documentsPathForFileName(name: relativePath)
-        let url = URL(fileURLWithPath: cachePath)
-        print("caching at \(url)")
-        
-        // asset is you AVAsset object
-        let exportSession = AVAssetExportSession.init(asset: video, presetName: AVAssetExportPresetHighestQuality)
-        exportSession?.outputURL = url
-        exportSession?.outputFileType = .mov
-        exportSession?.exportAsynchronously {
-            UserDefaults.standard.set(relativePath, forKey: key)
+    static func cacheVideo(stringURL: String, forKey key: String) {
+//        let relativePath = "video_\(Date.timeIntervalSinceReferenceDate).mov"
+//        let cachePath = LessonManager.documentsPathForFileName(name: relativePath)
+//        let url = URL(fileURLWithPath: cachePath)
+//        print("caching at \(url)")
+//
+//        // asset is you AVAsset object
+//        let exportSession = AVAssetExportSession.init(asset: video, presetName: AVAssetExportPresetHighestQuality)
+//        exportSession?.outputURL = url
+//        exportSession?.outputFileType = .mov
+//        exportSession?.exportAsynchronously {
+            UserDefaults.standard.set(stringURL, forKey: key)
             UserDefaults.standard.synchronize()
-        }
+//        }
     }
     
     /// Finds the image in the cache. The return is an optional, if it returns nil, the image was not found.
@@ -129,17 +129,15 @@ class LessonManager: ObservableObject {
     /// of this video. If it is present then it will go look for the video in FileManager and return it.
     ///
     /// - Parameter key: The key to get the image. In this case, the URL
-    /// - Returns: The image
+    /// - Returns: The video location
     
-    static func getVideo(forKey key: String) -> AVAsset? {
-        var video: AVAsset?
-        let possibleOldVideoPath = UserDefaults.standard.object(forKey: key) as? String
-        if let oldVideoPath = possibleOldVideoPath {
-            let oldFullPath = LessonManager.documentsPathForFileName(name: oldVideoPath)
-            let url = URL(fileURLWithPath: oldFullPath)
-            video = AVAsset(url: url)
+    static func getVideo(forKey key: String) -> URL? {
+        if let location = UserDefaults.standard.value(forKey: key) as? String {
+            if let url = URL(string: location) {
+                return url
+            }
         }
-        return video
+        return nil
     }
 
     

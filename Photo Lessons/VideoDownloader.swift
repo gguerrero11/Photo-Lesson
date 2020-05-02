@@ -55,6 +55,7 @@ class VideoDownloader: NSObject {
     var progress = 0.0
     var callback: (()->Void)?
     private var cancellable: AnyCancellable?
+//    var downloadTask: AVAggregateAssetDownloadTask?
     var downloadTask: AVAssetDownloadTask?
     var url: URL?
     var urlAsset: AVURLAsset?
@@ -73,10 +74,17 @@ class VideoDownloader: NSObject {
         
         guard let asset = self.urlAsset else { return }
         // Create new AVAssetDownloadTask for the desired asset
+//        downloadTask = downloadSession.aggregateAssetDownloadTask(with: asset,
+//                                                                  mediaSelections: [asset.preferredMediaSelection],
+//                                                                  assetTitle: "videoTitle",
+//                                                                  assetArtworkData: nil,
+//                                                                  options: [AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: 265_000])
+                
         downloadTask = downloadSession.makeAssetDownloadTask(asset: asset,
-                                                                 assetTitle: "title",
+                                                                 assetTitle: "videoTitle",
                                                                  assetArtworkData: nil,
-                                                                 options: nil)
+                                                                 options: [AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: 2_787_000])
+        downloadTask?.taskDescription = "videoTitle"
         downloadTask?.resume()
     }
     
@@ -87,6 +95,7 @@ class VideoDownloader: NSObject {
 }
 
 extension VideoDownloader: AVAssetDownloadDelegate {
+
     func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didLoad timeRange: CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [NSValue], timeRangeExpectedToLoad: CMTimeRange) {
         // Iterate through the loaded time ranges
         for value in loadedTimeRanges {
@@ -102,10 +111,10 @@ extension VideoDownloader: AVAssetDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didFinishDownloadingTo location: URL) {
-        print("saved at: \(location)")
+        print("saved at: \(location.absoluteURL)")
         if let key = url?.absoluteString {
             print("for key: \(key)")
-            LessonManager.cacheVideo(video: assetDownloadTask.urlAsset, forKey: key)
+            LessonManager.cacheVideo(stringURL: location.absoluteString, forKey: key)
         }
     }
 
